@@ -1,0 +1,23 @@
+name: Test the test harness
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Run tests
+        run: |
+          ./test.py
+          ./test.py a b c
+          ./test.py foo bar baz
+          echo OK
+
