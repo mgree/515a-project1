@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+#
+# This VERY COOL program is Copyright (c) 2023 Michael Greenberg.
 
 import sys
 
