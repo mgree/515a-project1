@@ -4,5 +4,8 @@ import sys
 
 if __name__ == "__main__":
     print(f'got {len(sys.argv)} arguments:')
+
+    i = 0
     for arg in sys.argv:
-        print(f'\t{arg}')
+        print(f'\t{i}: {arg}')
+        i += 1
